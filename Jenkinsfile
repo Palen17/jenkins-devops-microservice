@@ -10,7 +10,7 @@
 	}
 }
 */
-
+//Declarative
 pipeline{
 	agent any
 	stages{
@@ -29,6 +29,16 @@ pipeline{
 			steps{
 				echo "Integration Test"
 			}
+		}
+	} post{
+		always{
+			echo 'I ran always'
+		}
+		success{
+			echo 'Only run when success'
+		}
+		failure{
+			echo 'Only run on fail'
 		}
 	}
 	
