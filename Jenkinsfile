@@ -65,7 +65,7 @@ pipeline{
 			steps{
 				//"docker build -t palen17/currency-exchange-devops:$BUILD_TAG"
 				script{
-					dockerImage = docker.build("docker build -t palen17/currency-exchange-devops:${env.BUILD_TAG} .")
+					dockerImage = docker.build("docker build -t palen17/currency-exchange-devops:4.0.0.RELEASE")
 				}
 			}
 		}
